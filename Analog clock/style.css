@@ -1,0 +1,91 @@
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.clock{
+    height:30em;
+    width:30em;
+    background-image: url('https://illustoon.com/photo/5054.png');
+    background-size: contain;
+    position:relative;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    justify-content: center;
+    border-radius: 50%;
+}
+.clockTime{
+    position:relative;
+    height:80%;
+    width:80%;
+    /* top:0.5em;
+    left:0.5em; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hand{
+    position: absolute;
+    transform-origin: 0 0%;
+    transform: rotate(90deg);
+    top:49%;
+    /* left:50%; */
+    background-color: black;
+    /* height:50%;
+    width:10px; */
+    /* top:27%; */
+    transition: linear 0.1s;
+}
+#second{
+    background-color: red;
+    height:49%;
+    width: 5px;
+    /* left:25%; */
+    
+}
+#minute{
+    background-color: black;
+    height:40%;
+    width:7px;
+
+}
+#hour{
+    background-color: #f98d00;
+    height:30%;
+    width:10px;
+
+}
+.ball{
+    height:20px;
+    width:20px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 10;
+    position: relative;
+}
+@media (max-width:500px ) {
+    .clock{
+        width:50%;
+        height:50%;
+        justify-content:flex-start;
+        align-items: inherit;
+    }
+    .clockTime{
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+    .hand{
+        position: relative;
+        top:50%;
+        left:41%;
+    }
+}
